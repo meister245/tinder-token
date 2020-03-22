@@ -24,7 +24,7 @@ if __name__ == '__main__':
         ],
         install_requires=install_requires,
         include_package_data=True,
-        console_scripts=[
+        scripts=[
             'scripts/tinder-token.py'
         ],
         license='MIT'
