@@ -8,10 +8,6 @@ with open('./tinder_token/__init__.py') as f:
     version = re.search(r'(?<=__version__ = .)([\d\.]*)', f.read()).group(1)
 
 
-with open(r'./requirements.txt', 'r') as f:
-    install_requires = [x for x in f.read().split('\n') if len(x) > 0]
-
-
 if __name__ == '__main__':
     setup(
         name='tinder-token',
@@ -22,7 +18,12 @@ if __name__ == '__main__':
         packages=[
             'tinder_token'
         ],
-        install_requires=install_requires,
+        install_requires=[
+            'requests'
+        ],
+        extras_require={
+            'facebook': ['robobrowser', 'html5lib', 'Werkzeug==0.16.1']
+        },
         include_package_data=True,
         scripts=[
             'scripts/tinder-token.py'
