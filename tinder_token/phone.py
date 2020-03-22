@@ -3,8 +3,6 @@
 
 import requests
 
-from tinder_token.common import TinderTokenBase
-
 
 class TinderTokenPhoneCommon(object):
     TINDER_API_BASE_URL = "https://api.gotinder.com"

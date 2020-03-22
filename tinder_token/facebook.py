@@ -8,8 +8,6 @@ import json
 import requests
 import robobrowser
 
-from tinder_token.common import TinderTokenBase
-
 
 class TinderTokenFacebookCommon(object):
     TINDER_API_BASE_URL = "https://api.gotinder.com"
