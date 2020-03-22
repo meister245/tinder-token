@@ -22,10 +22,15 @@ if __name__ == '__main__':
             'requests'
         ],
         extras_require={
-            'facebook': ['robobrowser', 'html5lib', 'Werkzeug==0.16.1']
+            'facebook': [
+                'robobrowser',
+                'html5lib',
+                'Werkzeug==0.16.1'
+            ]
         },
         include_package_data=True,
         scripts=[
+            'scripts/tinder-token',
             'scripts/tinder-token.py'
         ],
         license='MIT'
