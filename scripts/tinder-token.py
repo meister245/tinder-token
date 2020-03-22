@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import re
 import sys
 import getpass
 
@@ -24,9 +25,11 @@ def main():
 
         phone = TinderTokenPhoneV2()
         phone_number = input('enter phone number [country_code + phone_number]: ')
+        phone_number = re.sub('[^0-9]', '', phone_number)
 
         phone.send_otp_code(phone_number)
         otp_code = input('enter received code: ')
+        otp_code = re.sub('[^0-9]', '', otp_code)
 
         refresh_token = phone.get_refresh_token(otp_code, phone_number)
         token = phone.get_tinder_token(refresh_token)
