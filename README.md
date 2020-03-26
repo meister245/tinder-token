@@ -6,11 +6,18 @@ Python library for generating access tokens for using Tinder API, using Facebook
 
 Install the package:
 
-    pip install tinder-token
+    pip install -U tinder-token
 
 If you want to use Facebook authentication, install with the following:
 
-    pip install tinder-token[facebook]
+    pip install -U tinder-token[facebook]
+
+### CLI Script
+
+A sample script is installed with the package.
+Follow the prompts in order to retrieve your access token.
+
+    ./tinder-token
 
 ### API - Facebook
 
@@ -38,10 +45,3 @@ The `facebook.get_tinder_token` function will return a tuple, which contains the
 
         refresh_token = phone.get_refresh_token(otp_code, phone_number)
         return phone.get_tinder_token(refresh_token)
-
-### CLI Script
-
-A sample script is installed with the package.
-Follow the prompts in order to retrieve your access token.
-
-    ./tinder-token
