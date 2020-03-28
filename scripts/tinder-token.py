@@ -9,7 +9,7 @@ import requests
 
 def main():
     requests.urllib3.disable_warnings()
-    auth_type = input(f'choose authentication [facebook/phone]: ')
+    auth_type = input('choose authentication [facebook/phone]: ')
 
     if auth_type == 'facebook':
         from tinder_token.facebook import TinderTokenFacebookV2
@@ -35,7 +35,7 @@ def main():
         token = phone.get_tinder_token(refresh_token)
 
     else:
-        exit(f'invalid value "{auth_type}"')
+        exit(f'invalid value - {auth_type}')
 
     print(f'your access token - {token}')
 
