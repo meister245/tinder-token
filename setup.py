@@ -28,6 +28,7 @@ if __name__ == '__main__':
         packages=[
             'tinder_token'
         ],
+        python_requires='>=3.6',
         install_requires=[
             'requests'
         ],
