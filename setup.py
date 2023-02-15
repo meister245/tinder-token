@@ -36,7 +36,7 @@ if __name__ == '__main__':
             'facebook': [
                 'robobrowser',
                 'html5lib',
-                'Werkzeug==0.16.1'
+                'Werkzeug==2.2.3'
             ]
         },
         include_package_data=True,
